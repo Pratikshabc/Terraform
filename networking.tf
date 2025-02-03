@@ -47,6 +47,7 @@ resource "aws_route_table_association" "public_route_table_association" {
 
 # Security Group for EC2s
 resource "aws_security_group" "allow_ssh_http" {
+  vpc_id      = aws_vpc.custom_vpc.id
   name        = "allow_ssh_http"
   description = "Allow SSH and HTTP access"
 
