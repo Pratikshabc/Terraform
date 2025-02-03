@@ -25,6 +25,7 @@ resource "aws_instance" "private_vm" {
   subnet_id              = aws_subnet.private_subnet.id
   security_groups        = [aws_security_group.allow_ssh_http.name]
   key_name               = aws_key_pair.ec2_key_pair.key_name
+#
 
   tags = {
     Name = "Private-VM"
