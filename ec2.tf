@@ -1,3 +1,4 @@
+#Comment
 resource "aws_instance" "public_vm" {
   ami                    = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (modify as needed)
   instance_type          = "t2.micro"
