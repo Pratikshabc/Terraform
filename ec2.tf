@@ -1,6 +1,6 @@
 #Comment
 resource "aws_instance" "public_vm" {
-  ami                    = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (modify as needed)
+  ami                    = "ami-05edf2d87fdbd91c1" # Amazon Linux 2 AMI (modify as needed)
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
   security_groups        = [aws_security_group.allow_ssh_http.name]
@@ -20,7 +20,7 @@ resource "aws_instance" "public_vm" {
 }
 
 resource "aws_instance" "private_vm" {
-  ami                    = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (modify as needed)
+  ami                    = "ami-05edf2d87fdbd91c1" # Amazon Linux 2 AMI (modify as needed)
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet.id
   security_groups        = [aws_security_group.allow_ssh_http.name]
